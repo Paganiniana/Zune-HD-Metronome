@@ -1,6 +1,6 @@
 # Quickstart
 
-It's been a long time since any of these packages have been updated. However, the last build of this application is included in the director <strong>/build/www</strong>. Therefore, you can run a simple server in that directory and experience the application, on your local machine.
+It's been a long time since any of these packages have been updated. However, the last build of this application is included in the directory <strong>/build/www</strong>. Therefore, you can run a simple server in that directory and experience the application, on your local machine.
 
 ```
 $ cd build/www/
