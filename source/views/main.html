@@ -1,0 +1,28 @@
+<div class="page page-main" ng-controller = "main as vm">
+      <header>
+        <h1>Metronome</h1>
+      </header>
+      <div class="display display-bpm-container">
+        <h2><span class="display-bpm">{{vm.bpm}}</span>&nbsp;bpm</h2>
+      </div>
+      <div class="controls">
+        <div class="controls-bpm">
+          <div class="hr">
+            <div class="hr-circle"></div>
+            <div class="hr-line"></div>
+          </div>
+
+          <div class="bpm-list">
+            <div ng-repeat = "num in vm.range" ng-class = "{selected : vm.bpm == num}" class="bpm-item" ng-click="vm.setBpm(num)">
+              {{num}}
+            </div>
+          </div>
+
+        </div>
+        <div class="controls-buttons">
+          <div ng-hide="vm.isPlaying" class="stop-start-button" ng-click="vm.start()"><img src = "static/images/icon_play.svg" /></div>
+          <div ng-show="vm.isPlaying" class="stop-start-button" ng-click="vm.stop()"><img src = "static/images/icon_stop.svg" /></div>
+          <a href = "#/options" class="settings-button" ng-click="vm.stop()"><img src = "static/images/icon_settings.svg" /></a>
+        </div>
+      </div>
+    </div>

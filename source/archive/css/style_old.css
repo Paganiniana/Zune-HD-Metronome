@@ -1,0 +1,133 @@
+/*
+  Style for Stinky
+  version: 0.0.1
+ */
+
+/*
+  Colors:
+  Dark Blue: rgb(8, 14, 59)
+  Norm Blue: rgb(49, 57, 117)
+  Light Blue: rgb(125, 131, 176)
+  Light Light Blue: rgb(216, 218, 234)
+
+  Box Shadow:
+  box-shadow: inset 0px 0px 7px 3px rgba(0,0,0,0.5);
+
+*/
+
+body {
+  margin:0;
+  font-family: sans-serif;
+  background-color: rgba(125, 131, 176,1);
+  background: linear-gradient(to bottom right, rgba(125,131,176,1), rgba(135, 131, 186,1));
+}
+
+@keyframes pulse-left-right {
+  0% {
+    background: linear-gradient(to right, rgba(8,13,59,0.7) 0%, rgba(126,131,176,1) 33%, rgba(126,131,176,1) 50%, rgba(126,131,176,1) 66%, rgba(125,131,176,1) 100%);
+  }
+  50% {
+    background: linear-gradient(to right, rgba(126,131,176,1) 0%, rgba(126,131,176,1) 33%, rgba(8,13,59,0.7) 50%, rgba(126,131,176,1) 66%, rgba(125,131,176,1) 100%);
+  }
+  100% {
+    background: linear-gradient(to right, rgba(126,131,176,1) 0%, rgba(126,131,176,1) 33%, rgba(126,131,176,1) 50%, rgba(126,131,176,1) 66%, rgba(8,13,59,0.7) 100%);
+  }
+}
+
+@keyframes pulse-right-left {
+  0% {
+    background: linear-gradient(to right, rgba(126,131,176,1) 0%, rgba(126,131,176,1) 33%, rgba(126,131,176,1) 50%, rgba(126,131,176,1) 66%, rgba(8,13,59,0.7) 100%);
+  }
+  50% {
+    background: linear-gradient(to right, rgba(126,131,176,1) 0%, rgba(126,131,176,1) 33%, rgba(8,13,59,0.7) 50%, rgba(126,131,176,1) 66%, rgba(125,131,176,1) 100%);
+  }
+  100% {
+    background: linear-gradient(to right, rgba(8,13,59,0.7) 0%, rgba(126,131,176,1) 33%, rgba(126,131,176,1) 50%, rgba(126,131,176,1) 66%, rgba(125,131,176,1) 100%);
+  }
+}
+
+.pulse-left-right {
+  animation: 0.075s pulse-left-right;
+}
+.pulse-right-left {
+  animation: 0.075s pulse-right-left;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  height:100%;
+}
+
+/* BPM Display */
+
+.bpm-display {
+  border-radius:10px;
+  box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.5);
+  height: 10vh;
+  margin-top:10vh;
+  margin-bottom:10vh;
+  padding-top:20px;
+  padding-bottom:40px;
+  width:80%;
+  text-align:center;
+  font-size:5em;
+  background-color: rgba(216, 218, 234,1);
+}
+
+
+/* BPM Selector */
+
+.bpm-list {
+  box-shadow: inset 0px 8px 7px -7px rgba(0,0,0,0.5),
+              inset 0px -8px 7px -7px rgba(0,0,0,0.5);
+  display:flex;
+  flex-direction: row;
+  width:100vw;
+  overflow: auto;
+  height:33vh;
+  background-color: rgba(216, 218, 234,1);
+  align-items: center;
+}
+
+.bpm-item {
+  margin-right:7px;
+  margin-left:7px;
+  font-size: 3em;
+}
+
+.selected {
+  color:red;
+  opacity:0.5;
+}
+
+/* Buttons*/
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: space-around;
+  align-items: center;
+  height:100%;
+}
+
+.button-container button {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 100%;
+  font-size:2.5em;
+  background-color: rgba(216, 218, 234,1);
+  border:none;
+  box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
+}
+
+.button-container button:active {
+  background-color: rgba(196, 198, 214,1);
+}
+
+.button-container button:focus {
+  outline:none;
+}

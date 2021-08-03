@@ -1,0 +1,18 @@
+<div class="page page-themes" ng-controller = "themeCon as vm">
+      <header>
+        <a href = "#/options" class="back-button">
+          <img src="static/images/icon_back.svg" alt="Back">
+        </a> <h2>Themes</h2>
+      </header>
+      <div class="display">
+
+        <ul>
+          <li ng-repeat = "theme in vm.themeList" ng-click = "vm.setTheme(theme.name)">
+            <div class="sample {{theme.name}}-sample"></div>
+            <div class = "title">{{theme.name}}</div>
+            <div class = "data">{{theme.description}}</div>
+          </li>
+        </ul>
+
+      </div>
+    </div>

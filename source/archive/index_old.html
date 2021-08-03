@@ -1,0 +1,36 @@
+<html ng-app = "app">
+  <head>
+    <title>Stinky</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+
+  </head>
+  <body ng-controller = "main as vm" class = "toggle-left-right">
+
+  <div class="container">
+
+    <div class="bpm-display">
+      {{vm.bpm}}
+    </div>
+
+    <div class="bpm-list">
+      <div ng-repeat = "num in vm.range" ng-class = "{selected : vm.bpm == num}" class="bpm-item" ng-click="vm.setBpm(num)">
+        {{num}}
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button class="start" ng-click = "vm.start()">&#9654;</button>
+      <button class="stop" ng-click = "vm.stop()">&#9632;</button>
+    </div>
+
+  </div>
+
+  <script src="./scripts/angular/angular.min.js" charset="utf-8"></script>
+  <script src="./scripts/app.js" charset="utf-8"></script>
+  <script src="./scripts/services/intervalService.js" charset="utf-8"></script>
+  <script src="./scripts/services/metronomeService.js" charset="utf-8"></script>
+  <script src="./scripts/services/cylonService.js" charset="utf-8"></script>
+  <script src="./scripts/controllers/mainController.js" charset="utf-8"></script>
+  </body>
+</html>

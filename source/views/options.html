@@ -1,0 +1,20 @@
+<div class="page page-options" ng-controller="optCon as vm">
+      <header>
+        <a href = "#/" class="back-button" ng-click = "vm.goBack()">
+          <img src="static/images/icon_back.svg" alt="Back">
+        </a> <h2>Options</h2>
+      </header>
+      <div class="display">
+        <ul>
+          <a href = "#/sounds" ng-click = "vm.animation.setRightLeft()"><li>
+            <div class="sample sample-icon"><img src = "static/images/icon_sound.svg" /></div>
+            <div class="title">sound</div>
+            <div class="data">CHOOSE A DIFFERENT SOUND</div>
+          </li></a>
+          <a href = "#/themes" ng-click = "vm.animation.setRightLeft()"><li>
+            <div class="sample"></div>
+            <div class="title">theme</div>
+            <div class="data">{{vm.theme.description}}</div>
+          </li></a>
+        </div>
+      </div>
